@@ -299,7 +299,7 @@ function purgeBuy(zx, name){
         function callback(err, resp, html) {
             if (!err) {
                 $ = cheerio.load(html);
-                var newBuyOrder=$('[data-listing_intent=0]').eq(0).parent().parent().parent().parent().attr('id').replace('listing-', '');
+                var newBuyOrder=$('[data-listing_intent=0]').eq(0).parent().parent().parent().parent().attr('id').replace('newbug', '');
                 DEBUG1 && console.log("newBuyOrder "+ newBuyOrder);
                 listings[itemIndex].listing_ids.static_buy=newBuyOrder;
                 var listingId=listings[itemIndex].listing_ids.buy;
