@@ -134,7 +134,7 @@ exports.createSell = function(itemid, itemIndex){
     }
     else{
         if (checkIfItemKnown(itemid)===true){
-            DEBUG1 && console.log(itemid+" missing, waiting");
+            DEBUG1 && console.log(itemid+" missing, waiting"); <<<<<< ?
             setTimeout(function() {
                 setImmediate(function() {
                     exports.createSell(itemid, itemIndex);
